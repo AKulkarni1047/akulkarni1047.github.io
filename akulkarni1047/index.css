@@ -11,24 +11,54 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    font-size: small;
 }
 
-/* Header Styling */
+/* Styling for the header */
 header {
-    background-color: #15328e;
+    background-color: #FF6347;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
-header h1 {
+.container.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers both image and text */
+}
+
+.profile-pic {
+    width: 150px; /* Adjust the size of the image */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 20px; /* Adds space between the image and text */
+    object-fit: cover; /* Ensures the image is centered and scaled */
+    border: 3px solid white; /* Optional border for better styling */
+}
+
+.text-content h1 {
     margin-bottom: 10px;
     font-size: 2.5em;
 }
 
-header p {
+.text-content p {
     font-size: 1.2em;
 }
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .container.header-content {
+        flex-direction: column; /* Stacks image and text on small screens */
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-right: 0; /* Removes margin when stacked */
+        margin-bottom: 10px;
+    }
+}
+
 
 /* Container Class */
 .container {
@@ -40,6 +70,11 @@ header p {
 /* Section Styling */
 section {
     padding: 20px 0;
+}
+
+.opportunities{
+    text-align: center;
+    font-size: medium;
 }
 
 /* Headings */
